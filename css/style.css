@@ -4,7 +4,9 @@
 
 body{
     width: 100%;
+    
 }
+
 h1{
     color:#ffc600;
     font-family: 'Indie Flower', cursive;
@@ -17,6 +19,7 @@ h1{
    /* added animation property to show the character one at a time*/
     animation: type 10s steps(100, end); 
     display: inline-block;
+    
  }
   @keyframes type{ 
    from { 
