@@ -13,6 +13,7 @@ nav ul li {
 header{
     background-size: cover;
     background-color: #1e3d59 ;
+    op
     height: 100px;
     width: 100%;
     font-family: font-family: 'Indie Flower', cursive;
@@ -27,14 +28,22 @@ header{
     margin: auto;
     padding-right: 25px;
     padding-left: 25px;
+    margin-top: 47px;
  }
  #section-left{
      width: 68%;
      float: left;
+     background-color: aquamarine;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     margin-left: -14px;
+     margin-bottom: 65px;
+
  }
  #section-right{
     width: 28%;
     float: left;
+
 }
 #Quot{
        width: 800px;
@@ -59,6 +68,10 @@ footer{
 }
 footer p{
     padding-top:50px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 587px;
 }
 #section-down{
     margin-top: 100px;
@@ -66,9 +79,17 @@ footer p{
     line-height: 40px;
 }
 #section-right{
-    margin-top: 100px;
-    margin-left: 50px;
+    margin-top: 8px;
+    margin-left: 36px;
     line-height: 40px;
+    background-color: bisque;
+    border: 1px solid black;
+    border-radius: 12px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: -webkit-center;
+    position: static;
+    right: 22px;
 }
 #move-left{
     width: 20px;
@@ -81,7 +102,8 @@ footer p{
     -webkit-transform: rotate(135deg);
     background-color: transparent;
     position: relative;
-    bottom: 100px;
+    bottom: 140px;
+    left: 37px;
 }
 #move-left:hover{
 border: none;
@@ -97,8 +119,8 @@ border: none;
     -webkit-transform: rotate(-45deg);
     background-color: transparent;
     position: relative;
-    bottom: 100px;
-    left: 900px;
+    bottom: 140px;
+    left: 905px;
 }
 #move-right:hover{
 border: none;
