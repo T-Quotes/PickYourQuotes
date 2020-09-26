@@ -1,4 +1,10 @@
+*{
+    box-sizing: border-box;
+}
 
+body{
+    width: 100%;
+}
 h1{
     color:#ffc600;
     font-family: 'Indie Flower', cursive;
@@ -82,6 +88,7 @@ h3{
     position: relative;
     right: 30px;
     font-family: 'Amiri', serif;
+    color: #ffc600;
     color: red;
     cursor: pointer;
     display: inline-block;
@@ -112,8 +119,8 @@ footer p{
     margin-top: 8px;
     margin-left: 50px;
     line-height: 40px;
-    background-color:#b4cc4e;
-    border: 1px solid #b4cc4e;
+    background-color:#e0bcd9;
+    border: 1px solid  #ebcfe5;
     border-radius: 12px;
     padding-top: 25px;
     padding-bottom: 25px;
