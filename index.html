@@ -3,23 +3,67 @@
 <head>
     
     <title>T-QUOT</title>
-    <link rel="stylesheet" href="../css/reset.css">
-    <link rel="stylesheet" href="../css/style.css">
-
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;1,400;1,700&family=Changa:wght@600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+
+    <section id="popup-form">
+        <form action="">
+            <legend></legend>
+            <img id='mockup' src="https://mockups.32pt.com/mockupServer/blanks/TC0/White/unisex-crewneck-tshirt-v2-front/regular.jpg" alt="">
+            <div id="printText">
+            <p>HoldPlace</p>
+        </div>
+            <div>
+            <label for="Color">Color</label>
+            <select name="Color" id="Color">
+                <option value="white">white</option>
+                <option value="black">black</option>
+            </select>
+            </div>
+            <div>
+            <label for="">Size</label> 
+            <select name="Size" id="Size">
+                <option value="S">S</option>
+                <option value="M">M</option>
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+            </select>
+        </div>
+             <div>
+            <label for="">Qty</label> 
+            <select name="qty" id="qty">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+            </select>
+        </div>
+        <div>
+         <input type="submit" id="Place-Order" value="Place Order">
+        </div>
+
+            
+        </form>
+    </section>
+
     <header>
         
         <nav>
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">Cart</a></li>
+                <li><a href=""> <img id="icon"src="https://dp.image-gmkt.com/dp2016/minishop/2019/10/07/e9ec25cb-5241-4b14-8895-79743ca82070.gif" alt=""> Cart</a></li>
                 <li><a href="">About</a></li>
             </ul>
         </nav>
-        <h1>T-QUOT</h1>
+       
     </header>
-
+    <h1>T-QUOT</h1>
     <main>
         
         <section id="section-top">
@@ -50,22 +94,19 @@
             </section>
         </section>
 
-        <section id="popup-form">
-            
-        </section>
     </main>
 
     <footer>
         <section id="content">
             <p>CopyRights&copy; 2020 T-QUOT. all rights reserved</p>
             <ul>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""><img src="" alt=""></a></li>
-                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href="#" class="fa fa-facebook"></a></li>
+                <li><a href="#" class="fa fa-twitter"></a></li>
+                <li><a href="#" class="fa fa-youtube"></a></li>
+                <li><a href="#" class="fa fa-instagram"></a></li>
+                <li><a href="#" class="fa fa-snapchat-ghost"></a></li>
             </ul>
-        </section>
-
-        
+        </section>    
     </footer>
     <script src="js/quot.js"></script>
     <script src="js/resorce.js"></script>
