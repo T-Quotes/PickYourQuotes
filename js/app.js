@@ -13,6 +13,9 @@ const popupForm = document.getElementById('popup-form');
 //------
 const imageFoldor = ['proverb1.png', 'proverb2.png', 'proverb3.png', 'proverb4.png', 'proverb5.png', 'proverb6.png', 'proverb7.jpg', 'proverb8.png', 'proverb9.png', 'proverb10.jpg'];
 let index = 0;
+let cart =getCartLocalStorage();
+
+console.log(cart);
 //---------------------------
 //To get random image index
 function getRandomIndex(min, max) {
@@ -65,12 +68,15 @@ function setTitleAndQuot(title, story) {
 
 //---------------------------
 function getLocalStorge() {
-
   let quotAll = JSON.parse(localStorage.getItem('Quotes'));
-  for (let i = 0; i < quotAll.length; i++) {
-    // Quot.all = [];
-    Quot.all[i].tranding += quotAll[i].tranding;
+  if (quotAll){
+    Quot.all = [];
+    for (let i = 0; i < quotAll.length; i++) {
+      new Quot(quotAll[i].title,quotAll[i].story);
+      Quot.all[i].tranding += quotAll[i].tranding;
+    }
   }
+
 }
 
 //---------------------------
@@ -86,19 +92,23 @@ function setTrinding() {
 
 //--------------------------------
 
-let quotAll = JSON.stringify(Quot.all);
+let quotAll ;
 
 function setLocalStorge() {
+  quotAll = JSON.stringify(Quot.all);
   localStorage.setItem('Quotes', quotAll);
 }
-
 
 
 
 //---------------------------
 popupForm.addEventListener('click', formSubmit);
 function formSubmit(event) {
+  let cart =new Cart([]);
   let color,size,qty;
+  color=document.getElementById('Color').value;
+  size=document.getElementById('Size').value;
+  qty=document.getElementById('qty').value;
   if (event.target.id === 'Color') {
     color = event.target.value;
     if (color==='white'){
@@ -121,11 +131,23 @@ function formSubmit(event) {
 
   }
 
+  if (event.target.id==='Place-Order'){
+    cart=getCartLocalStorage();
+    cart.Orders.push(new Order(color,size,qty));
+    popupForm.style.display = 'none';
+    localStorage.setItem('cart',JSON.stringify(cart));
 
-
-
+  }
 }
-
+//---------------------------
+function getCartLocalStorage(){
+  let k=localStorage.getItem('cart');
+  k=JSON.parse(k);
+  if(k){
+    return new Cart(k.Orders);
+  }
+  else return new Cart([]);
+}
 //---------------------------
 sectionElmLeft.addEventListener('click', quotControl);
 
@@ -134,6 +156,9 @@ function quotControl(event) {
     popupForm.style.display = 'block';
     let text=document.getElementById('printText').firstElementChild;
     text.textContent= Quot.all[index].title;
+    Quot.all[index].tranding++;
+    setLocalStorge();
+
   }
 
   //---
@@ -145,12 +170,10 @@ function quotControl(event) {
     if (index === Quot.all.length - 1) {
       buttonRight.style.display = 'none';
       setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
-      Quot.all[index].tranding++;
     }
     else {
       buttonLeft.style.display = 'inline-block';
       setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
-      Quot.all[index].tranding++;
     }
   }
 
@@ -158,13 +181,11 @@ function quotControl(event) {
     if (index === 0) {
       buttonLeft.style.display = 'none';
       setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
-      Quot.all[index].tranding++;
     }
     else {
       buttonRight.style.display = 'inline-block';
       index--;
       setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
-      Quot.all[index].tranding++;
     }
   }
 
@@ -182,7 +203,6 @@ function render() {
   //--
   buttonLeft.style.display = 'none';
   setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
-  Quot.all[index].tranding++;
   //--
 
   setTrinding();
@@ -190,6 +210,4 @@ function render() {
 }
 
 // eslint-disable-next-line no-undef
-setLocalStorge();
 render();
-
