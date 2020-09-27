@@ -1,8 +1,28 @@
-/* :root{
-    
-} */
+
+h1{
+    color:#ffc600;
+    font-family: 'Indie Flower', cursive;
+    font-size: 70px;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 21em;
+    padding-top: 50px;
+   /* added animation property to show the character one at a time*/
+    animation: type 10s steps(100, end); 
+    display: inline-block;
+ }
+  @keyframes type{ 
+   from { 
+        width: 0; 
+        } 
+    }
+
 nav ul li {
     display: inline-block;
+}
+li{
+    padding-top: 10px;
 }
   nav ul li a{
     padding: 30px;
@@ -12,11 +32,11 @@ nav ul li {
 }
 header{
     background-size: cover;
-    background-color: #1e3d59 ;
+    background-color: #2C0A28;
     height: 100px;
     width: 100%;
-    font-family: font-family: 'Indie Flower', cursive;
-    position: fixed;
+    font-family: 'Indie Flower', cursive;
+    /* position: fixed; */
 }
  #section-top img{
     display: inline-block;
@@ -27,21 +47,30 @@ header{
     margin: auto;
     padding-right: 25px;
     padding-left: 25px;
+    margin-top: 47px;
  }
  #section-left{
      width: 68%;
      float: left;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     margin-left: 80px;
+     margin-bottom: 65px;
+     height: 400px;
+     font-family: 'Amiri', serif;
  }
- #section-right{
-    width: 28%;
-    float: left;
+#icon{
+    width: 60px;
+    height: 60px;
+    
+    
 }
 #Quot{
        width: 800px;
     text-align: center;
     font-size: x-large;
     background-color: antiquewhite;
-    margin-left: 50px;
+    margin-left: 94px;
 }
 h3{
     text-align: center;
@@ -49,16 +78,22 @@ h3{
     padding-bottom: 20px;
     position: relative;
     right: 30px;
+    font-family: 'Amiri', serif;
 }
 footer{
     clear: both;
     background-size: cover;
-    background-color: #1e3d59 ;
-    height: 100px;
+    background-color: #2C0A28;
+    height: 200px;
     width: 100%;
 }
 footer p{
     padding-top:50px;
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    left: 587px;
+    color:antiquewhite;
 }
 #section-down{
     margin-top: 100px;
@@ -66,9 +101,19 @@ footer p{
     line-height: 40px;
 }
 #section-right{
-    margin-top: 100px;
+    margin-top: 8px;
     margin-left: 50px;
     line-height: 40px;
+    background-color:#b4cc4e;
+    border: 1px solid #b4cc4e;
+    border-radius: 12px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    text-align: -webkit-center;
+    position: static;
+    height: 400px;
+    width: 20 px;
+    float: left;
 }
 #move-left{
     width: 20px;
@@ -81,11 +126,10 @@ footer p{
     -webkit-transform: rotate(135deg);
     background-color: transparent;
     position: relative;
-    bottom: 100px;
+    bottom: 140px;
+    left: 37px;
 }
-#move-left:hover{
-border: none;
-}
+
 #move-right{
     width: 20px;
     height: 20px;
@@ -97,9 +141,52 @@ border: none;
     -webkit-transform: rotate(-45deg);
     background-color: transparent;
     position: relative;
-    bottom: 100px;
-    left: 900px;
+    bottom: 140px;
+    left: 905px;
 }
-#move-right:hover{
-border: none;
+footer ul li{
+    display: inline-block;
 }
+ .fa {
+    padding: 20px;
+    font-size: 5px;
+    width: 5px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+
+  }
+  
+  .fa:hover {
+      opacity: 0.4;
+  }
+  
+  .fa-facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .fa-twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+
+  .fa-youtube {
+    background: #bb0000;
+    color: white;
+  }
+  
+  .fa-instagram {
+    background: #125688;
+    color: white;
+  }
+  
+  
+  .fa-snapchat-ghost {
+    background: #fffc00;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  
