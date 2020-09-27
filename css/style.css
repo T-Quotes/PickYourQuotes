@@ -36,7 +36,7 @@ header{
     height: 100px;
     width: 100%;
     font-family: 'Indie Flower', cursive;
-    /* position: fixed; */
+    position: static;
 }
  #section-top img{
     display: inline-block;
@@ -48,8 +48,11 @@ header{
     padding-right: 25px;
     padding-left: 25px;
     margin-top: 47px;
+    transform: scale(1.1);
  }
  #section-left{
+     background-image: url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
+     background-size: cover;
      width: 68%;
      float: left;
      padding-top: 30px;
@@ -58,19 +61,20 @@ header{
      margin-bottom: 65px;
      height: 400px;
      font-family: 'Amiri', serif;
+     background-color: rgb(247, 247, 191);
+     opacity: 0.7;
  }
 #icon{
     width: 60px;
     height: 60px;
-    
-    
 }
 #Quot{
        width: 800px;
     text-align: center;
     font-size: x-large;
-    background-color: antiquewhite;
     margin-left: 94px;
+    color:#4b0c3b;
+  
 }
 h3{
     text-align: center;
@@ -84,7 +88,7 @@ footer{
     clear: both;
     background-size: cover;
     background-color: #2C0A28;
-    height: 200px;
+    height: 150px;
     width: 100%;
 }
 footer p{
@@ -115,10 +119,11 @@ footer p{
     width: 20 px;
     float: left;
 }
+
 #move-left{
     width: 20px;
     height: 20px;
-    border: solid black;
+    border: solid #ffc600;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -133,7 +138,7 @@ footer p{
 #move-right{
     width: 20px;
     height: 20px;
-    border: solid black;
+    border: solid #ffc600;
     border-width: 0 3px 3px 0;
     display: inline-block;
     padding: 3px;
@@ -143,14 +148,16 @@ footer p{
     position: relative;
     bottom: 140px;
     left: 905px;
+
 }
+
 footer ul li{
     display: inline-block;
 }
  .fa {
-    padding: 20px;
-    font-size: 5px;
-    width: 5px;
+    padding: 10px;
+    width: 50px;
+    line-height: 30px;
     text-align: center;
     text-decoration: none;
     margin: 5px 2px;
@@ -161,32 +168,3 @@ footer ul li{
   .fa:hover {
       opacity: 0.4;
   }
-  
-  .fa-facebook {
-    background: #3B5998;
-    color: white;
-  }
-  
-  .fa-twitter {
-    background: #55ACEE;
-    color: white;
-  }
-  
-
-  .fa-youtube {
-    background: #bb0000;
-    color: white;
-  }
-  
-  .fa-instagram {
-    background: #125688;
-    color: white;
-  }
-  
-  
-  .fa-snapchat-ghost {
-    background: #fffc00;
-    color: white;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-  }
-  
