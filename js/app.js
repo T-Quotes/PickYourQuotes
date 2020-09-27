@@ -25,20 +25,28 @@ function randomImages() {
   let temp = [];
   console.log(temp);
   let imgElm;
+
   for (let i = 0; i < 3; i++) //3 image
   {
     imgElm = document.createElement('img');
     sectionElmTop.appendChild(imgElm);
-    imgElm.src = `img/${imageFoldor[getRandomIndex(0, imageFoldor.length - 1)]}`;
-    imgElm.title = imageFoldor[getRandomIndex(0, imageFoldor.length - 1)].split('.')[0];
+    let indexImg=getRandomIndex(0, imageFoldor.length - 1);
+    imgElm.src = `img/${imageFoldor[indexImg]}`;
+    imgElm.title = imageFoldor[indexImg].split('.')[0];
+
     if (i === 1) {
       while (imgElm.title === temp[i - 1]) {
-        imgElm.src = `img/${imageFoldor[getRandomIndex(0, imageFoldor.length - 1)]}`;
+        indexImg=getRandomIndex(0, imageFoldor.length - 1);
+        imgElm.src = `img/${imageFoldor[indexImg]}`;
+        imgElm.title = imageFoldor[indexImg].split('.')[0];
       }
     }
-    else if (i === 2) {
-      while (imgElm.title === temp[i -1] && imgElm.title === temp[i - 2])
-        imgElm.src = `img/${imageFoldor[getRandomIndex(0, imageFoldor.length-1)]}`;
+    if (i === 2) {
+      while (imgElm.title === temp[i -1] || imgElm.title === temp[i - 2]){
+        indexImg=getRandomIndex(0, imageFoldor.length - 1);
+        imgElm.src = `img/${imageFoldor[indexImg]}`;
+        imgElm.title = imageFoldor[indexImg].split('.')[0];
+      }
     }
 
     temp.push(imgElm.title);
