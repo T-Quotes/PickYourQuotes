@@ -5,14 +5,7 @@ let allQuot=[{title:'عادت حليمة لعادتها القديمة',story:'�
 
   {title:'All Roads Lead to Rome',story:'origins may relate to the Roman monument known as the Milliarium Aureum, or golden milestone, erected by Emperor Caesar Augustus in the central forum of ancient Rome. All distances in the Roman Empire were measured from this point and it was regarded as the site from which all principle roads diverged. As such, artists such as Giacomo Lauro, whose rendition of the Milliarium Aureum appears in this exhibit, often used it as a metaphor for the intensely cosmopolitan culture that has long been present in Rome.'}
 
-
-
-
 ];
-
-
-
-
 // function setQuot(titleQ,stroyQ)
 // {
 //   allQuot.push({title:titleQ,story:stroyQ});
