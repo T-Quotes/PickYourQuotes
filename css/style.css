@@ -6,16 +6,20 @@ body{
     width: 100%;
 }
 h1{
+    background-image: url(https://media.swncdn.com/cms/CCOM/65092-proverbs-bible.1200w.tn.jpg);
+    background-size: cover;
+    height: 650px;
+    width: 100%;
+    background-repeat: no-repeat;
     color:#ffc600;
     font-family: 'Indie Flower', cursive;
     font-size: 70px;
     text-align: center;
     white-space: nowrap;
     overflow: hidden;
-    width: 21em;
     padding-top: 50px;
    /* added animation property to show the character one at a time*/
-    animation: type 10s steps(100, end); 
+    animation: type 3s steps(100, end); 
     display: inline-block;
  }
   @keyframes type{ 
@@ -48,7 +52,7 @@ header{
 }
  #section-top img{
     display: inline-block;
-    padding-top: 100px;
+    padding-top: 50px;
     text-align: center;
     height:450px ;
     width: 33%;
