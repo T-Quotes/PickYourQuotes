@@ -140,14 +140,7 @@ function formSubmit(event) {
   }
 }
 //---------------------------
-function getCartLocalStorage(){
-  let k=localStorage.getItem('cart');
-  k=JSON.parse(k);
-  if(k){
-    return new Cart(k.Orders);
-  }
-  else return new Cart([]);
-}
+
 //---------------------------
 sectionElmLeft.addEventListener('click', quotControl);
 
