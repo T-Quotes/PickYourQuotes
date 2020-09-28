@@ -9,3 +9,18 @@ function Quot(title, story) {
 
 }
 
+
+function Order (color,size,qty)
+{
+  this.color=color;
+  this.size=size;
+  this.qty=qty;
+
+}
+
+function Cart (Orders)
+{
+  this.Orders=Orders;
+}
+
+
