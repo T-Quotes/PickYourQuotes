@@ -60,11 +60,8 @@ function removeOrder(event) {
       localStorage.setItem('cart', JSON.stringify(cart));
       cartRender();
     }
-
-
-
-
 }
 
 
 cartRender();
+
