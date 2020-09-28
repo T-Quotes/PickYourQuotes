@@ -83,13 +83,15 @@ header{
   
 }
 h3{
-    text-align: center;
     font-size: 50px;
     padding-bottom: 20px;
     position: relative;
     right: 30px;
     font-family: 'Amiri', serif;
     color: #ffc600;
+    color: red;
+    cursor: pointer;
+    display: inline-block;
 }
 footer{
     clear: both;
@@ -107,6 +109,8 @@ footer p{
     color:antiquewhite;
 }
 #section-down{
+    text-align: center;
+
     margin-top: 100px;
     margin-left: 50px;
     line-height: 40px;
@@ -161,6 +165,65 @@ footer p{
 footer ul li{
     display: inline-block;
 }
+
+
+
+#popup-form {
+width:100%;
+height: 100%;
+background-color: rgba(128, 128, 128, 0.678);
+position: fixed;
+z-index: 1;
+display: none;
+
+}
+#popup-form form{
+margin: auto;
+margin-top:40px;
+width: 1000px;
+height: 600px;
+background-color: white;
+padding: 50px;
+border:  1px solid black;
+
+}
+
+#popup-form form div {
+display: block;
+text-align: right;
+padding: 20px;
+
+}
+#popup-form form div label{
+font-size: x-large;
+}
+#popup-form form img {
+    position: fixed;
+    width: 500px;
+    height: 600px;
+    border: solid 1px black;
+}
+
+#printText{
+position: absolute;
+display: inline-block;
+width: 210px;
+max-width: 210px;
+word-wrap:break-word;
+margin-left: 130px;
+margin-top: 170px;
+font-size: xx-large;
+display: inline-block;
+font-family: 'Amiri', serif;
+font-family: 'Changa', sans-serif;
+opacity: 0.8;
+
+}
+#printText p{
+text-align: center;
+opacity: 0.8;
+}
+
  .fa {
     padding: 10px;
     width: 50px;
@@ -175,3 +238,4 @@ footer ul li{
   .fa:hover {
       opacity: 0.4;
   }
+
