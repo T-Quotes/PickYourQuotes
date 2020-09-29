@@ -1,270 +1,539 @@
 *{
     box-sizing: border-box;
-}
-
-body{
+    }
+    
+    body{
     width: 100%;
-}
-h1{
-    background-image: url(https://media.swncdn.com/cms/CCOM/65092-proverbs-bible.1200w.tn.jpg);
+    }
+    
+    nav{
     background-size: cover;
-    height: 650px;
+    background-color: #2C0A28;
+    height: 100px;
+    width: 100%;
+    font-family: 'Indie Flower', cursive;
+    }
+    
+    nav ul{
+    float: right;
+    }
+    nav ul li{
+    display: inline-block;
+    padding-top:35px;
+    padding: 30px;
+    }
+    
+    nav ul li:first-child{
+    position: absolute;
+    left:0px;
+    top:-32px;
+    }
+    nav ul li a{
+    color: #f5f0e1;
+    font-size: xx-large;
+    text-decoration: none;
+    }
+    
+    nav ul li a:hover{
+    
+    background-color:#ffc600;
+    opacity: 0.7;
+    color:#4b0c3b;
+    
+    }
+    
+    nav ul li:first-child a:hover{
+    text-decoration: none;
+    background-color:transparent;
+    
+    }
+    #logo{
+    
+    width: 90px;
+    height: 105px;
+    }
+    
+    header h1{
+    background-image: url(https://i.ytimg.com/vi/ZnguoFcG290/maxresdefault.jpg);
+    background-size: cover;
+    height: 550px;
     width: 100%;
     background-repeat: no-repeat;
     color:#ffc600;
     font-family: 'Indie Flower', cursive;
     font-size: 70px;
     text-align: center;
-    white-space: nowrap;
     overflow: hidden;
     padding-top: 50px;
-   /* added animation property to show the character one at a time*/
-    animation: type 3s steps(100, end); 
-    display: inline-block;
- }
-  @keyframes type{ 
-   from { 
-        width: 0; 
-        } 
-    }
-
-nav ul li {
-    display: inline-block;
-    padding-top:35px;
-    padding: 30px;
-}
-li:last-child{
-    padding-right:50px;
-}
+    animation: type 1s steps(100, end);
+    border: 1px solid #ffc600;
+    text-shadow: 4px 4px 4px #4b0c3b;
     
-  nav ul li a{
-    color: #f5f0e1;
-    font-size: xx-large;
-    text-decoration: none;
-  }
-header{
-    background-size: cover;
-    background-color: #2C0A28;
-    height: 100px;
-    width: 100%;
-    font-family: 'Indie Flower', cursive;
-    position: static;
-}
- #section-top img{
+    
+    }
+    #section-top {
+    padding: 2px;
+    background-color: #4b0c3b;
+    margin: 3px;
+    }
+    
+    #section-top img{
     display: inline-block;
-    padding-top: 50px;
+    padding:2px;
     text-align: center;
     height:450px ;
-    width: 33%;
-    padding-right: 70px;
-    padding-left: 70px;
-
- }
- #section-left{
-     background-image: url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
-     background-size: cover;
-     width: 68%;
-     float: left;
-     padding-top: 30px;
-     padding-bottom: 30px;
-     margin-left: 80px;
-     margin-bottom: 65px;
-     height: 400px;
-     font-family: 'Amiri', serif;
-     opacity: 0.7;
-     border-radius: 12px;
-     color:#4b0c3b;  
- }
- a:hover{
-    background-color:#ffc600;
-    opacity: 0.7;
-    color:#4b0c3b
-}
-
- 
-#icon{
-    float: left;
-    width: 50px;
-    height: 65px;
+    width: 33.3%;
     position: relative;
-    left: 285px;
-    top: 1px;
-}
-#Quot{
-       width: 800px;
+    }
+    
+    #section-top img:hover{
+    animation: shake 1s;
+    animation-iteration-count: infinite;
+    border: 5px solid #ffc600;
+    
+    }
+    
+    #section-down{
+
+    margin: 3px;
+    background-color:#4b0c3be5 ;
+    line-height: 40px;
+    padding: 8px;
+    padding-bottom: 10px;
+    }
+    
+    #section-down h2{
+    color :black;
+    text-align: left;
+    font-size: 20px;
+    }
+    
+    #section-left
+    { background-color: rgba(255, 255, 255, 0.61) ;
+    background-image:
+    url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
+    background-size: cover;
+    width: 69%;
+    font-family: 'Amiri', serif;
+    opacity: 1;
+    border-radius: 12px;
+    color:#4b0c3b;
+    height: 500px;
+    display: inline-block;
+    
+    }
+    #section-left h2{
+    text-align: center;
+    }
+    
+    #Quot {
+    margin: auto;
+    width: 800px;
+    max-width: 800px;
+    padding: 0px;
+    text-align: center;
+    }
+    #Quot h2{
+    font-size: 50px;
+    padding: 20px;
+    font-family: 'Amiri', serif;
+    color:#ffc600;
+    cursor: pointer;
+    display: inline-block;
+    padding-right:10px ;
+    padding-left: 10px;
+    font-weight: bolder;
+    }
+    
+    #Quot h2:hover {
+    transform: scale3d(1.1,1.2,1.3);
+    
+    
+    }
+    
+    :root{
+
+        --maincolor:blue;
+        --secColor:red;
+        --textColor:green
+        --headColor:
+    }
+    
+    
+    
+    #Quot h3{
     text-align: center;
     font-size: x-large;
-    margin-left: 94px;
-    color:#4b0c3b;
-  
-}
-h3{
-    font-size: 50px;
-    padding-bottom: 20px;
-    position: relative;
-    right: 30px;
-    font-family: 'Amiri', serif;
-    color: #ffc600;
-    cursor: pointer;
-    display: inline-block;}
-    h3:hover {
-     transform: scale3d(1.1,1.2,1.3);
+    padding: 10px;
+    color: #4b0c3b;
+    font-weight: bolder;
+    
     }
-      
+    
+    
+    #move-left{
+    position: relative;
+    top: 200px;
+    right: -20px;
+    width: 35px;
+    height: 35px;
+    border: solid #ffc600;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+    background-color: transparent;
+    
+    }
+    
+    #move-right{
+    position: relative;
+    top: 200px;
+    left: 940px;
+    width: 35px;
+    height: 35px;
+    border: solid #ffc600;
+    border-width: 0 3px 3px 0;
+    display: inline-block;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    background-color: transparent;
+    
+    
+    }
+    
+    #move-right:focus, #move-left:focus{
+        outline: none;
+        }
+        
+    #section-right
+    { background-color: rgba(255, 255, 255, 0.61) ;
+    background-image:
+    url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
+    background-position: right;
+    line-height: 40px;
+    position: relative;
+    color: #2C0A28;
+    border-radius: 12px;
+    width: 30%;
+    height: 500px;
+    display: inline-block;
+    float: right;
+    
+    }
 
-footer{
+    #section-right article{
+        padding: 30px;
+    display: inline-block;
+    overflow: auto;
+    }
+
+    
+    #trinding li{
+    color:#2C0A28;
+    font-weight: bolder;
+    list-style-type: none;
+    text-align: justify;
+    text-align: center;
+
+    
+    }
+    
+    
+    #tableSection {
+    font-family: 'Indie Flower', cursive;
+    font-size: 50px;
+    text-align: center;
+    padding: 50px;
+    background-color: rgb(132, 132, 206);
+    width: 500px;
+    height: 500px;
+    margin: auto;
+    border: 1px solid black;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    
+    
+    }
+    
+    #tableSection table {
+    font-size: 20px;
+    margin: auto;
+    margin-top: 30px;
+    }
+    
+    
+    #tableSection table {
+    padding: 50px;
+    border : 1px solid black;
+    
+    }
+    #tableSection article{
+    position: relative;
+    overflow-y: auto;
+    padding-bottom: 100px;
+    width: 450px;
+    height: 300px;
+    border: 1px black solid;
+    border-radius: 30px;
+    background-color: wheat;
+    right:25px;
+    top: 10px;
+    }
+    #tableSection input{
+    position: absolute;
+    top: 650px;
+    right: 700px;
+    background-color: brown;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: x-large;
+    
+    }
+    #tableSection table td,th{
+    padding: 10px;
+    border: 1px solid black;
+    
+    }
+    
+    
+    
+    footer ul li{
+    display: inline-block;
+    }
+    
+    
+    
+    #popup-form {
+    width:100%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.678);
+    position: fixed;
+    z-index: 1;
+    display: none;
+    
+    }
+    #popup-form form{
+    margin: auto;
+    margin-top:40px;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    padding: 50px;
+    border: 3px solid #ffc600;
+    
+    }
+    
+    #popup-form form div {
+    display: block;
+    text-align: right;
+    padding: 20px;
+    
+    }
+    
+    #popup-form form div select {
+     font-size: x-large;
+     font-weight: lighter;
+
+    }
+    #popup-form form div label{
+    font-size: x-large;
+    }
+    #popup-form form img {
+    position: fixed;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #ffc600;
+    }
+    
+    #printText{
+    position: absolute;
+    display: inline-block;
+    width: 210px;
+    max-width: 210px;
+    word-wrap:break-word;
+    margin-left: 150px;
+    margin-top: 130px;
+    font-size: xx-large;
+    display: inline-block;
+    font-family: 'Amiri', serif;
+    font-family: 'Changa', sans-serif;
+    opacity: 0.8;
+    
+    }
+    #printText p{
+    text-align: center;
+    opacity: 0.8;
+    }
+   
+    
+    #my-qout{
+    position: relative;
+    width: 700px;
+    padding:10px ;
+    margin: auto;
+    margin-top: 30px;
+    background-color: grey;
+    
+    }
+    #my-qout input {
+    height: 30px;
+    width: 200;
+    margin-top: 10px;
+    }
+    
+    #seeMyQout{
+    position: relative;
+    left:300px;
+    bottom: 50px;
+    font-size:60px;
+    }
+    
+    #Pageform {
+    width:95%;
+    height: 100%;
+    background-color: rgba(128, 128, 128, 0.342);
+    margin: 30px;
+    }
+    #Pageform form{
+    margin: auto;
+    width: 1000px;
+    height: 600px;
+    background-color: white;
+    padding: 50px;
+    border: 3px solid #ffc600;
+    }
+    
+    #Pageform #printText{
+    position: absolute;
+    left: 20px;
+    width: 210px;
+    max-width: 210px;
+    word-wrap:break-word;
+    display: inline-block;
+    font-family: 'Changa', sans-serif;
+    opacity: 0.8;
+    
+    }
+    #Pageform #printText p{
+    text-align: center;
+    opacity: 0.8;
+    font-size: xx-large;
+    
+    }
+    
+    #Pageform form div {
+    display: block;
+    text-align: right;
+    padding: 20px;
+    
+    }
+    #Pageform form div label{
+    font-size: x-large;
+    }
+    #Pageform form img {
+    float: left;
+    width: 500px;
+    height: 500px;
+    border: 3px solid #ffc600;
+    }
+
+    #Cancel{
+        position: absolute;
+        top: 50px;
+        left: 1230px;
+        width: 20px;
+        height: 20px;
+    }
+    
+    .aboutImages{
+    position: relative;
+    top: 5cm;
+    margin-left: 4%;
+    min-inline-size: max-content;
+    
+    }
+    .e7na{
+    border-radius: 45%;
+    }
+    
+    .navBar{
+    margin-left: 54%;
+    position: absolute;
+    top: 14px;
+    left: -9cm;
+    display: flex;
+    }
+    
+    
+    footer{
+        position: absolute;
     clear: both;
     background-size: cover;
     background-color: #2C0A28;
     height: 150px;
     width: 100%;
-}
-footer p{
+    }
+    footer p{
     padding-top:50px;
     display: inline-block;
     text-align: center;
     position: relative;
     left: 587px;
     color:antiquewhite;
-}
-#section-down{
-    text-align: center;
-    margin-top: 100px;
-    margin-left: 50px;
-    line-height: 40px;
-}
-#section-right{
-    background-image: url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
-   background-position: right;
-    margin-top: 1px;
-    margin-left: 80px;
-    line-height: 40px;
-    border: 1px solid #f0eaee;
-    color: #2C0A28;
-    border-radius: 12px;
-    padding-top: 30px;
-    padding-left: 15px;
-    padding-bottom: 30px;
-    position: static;
-    height: 400px;
-    width: 15%;
-    float: left;
-}
- #trinding li{
-    color:#721467;
-    list-style-type: square;
-list-style-position: inside;
-text-align: justify;
+    }
+    
+    .fa {
+        padding-top:20px;
+        width: 20px;
+        text-align: center;
+        text-decoration: none;
+        /* margin: 5px 2px; */
+        border-radius: 50%;
+        color: #ffc600;
+        
+        }
+        .fa-facebook
+        {
+        margin-left:670px;
+        }
+        .fa:hover {
+        opacity: 0.4;
+        }
+     
+        
 
-}
-#move-left{
-    width: 35px;
-    height: 35px;
-    border: solid #ffc600;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(135deg);
-    -webkit-transform: rotate(135deg);
-    background-color: transparent;
-    position: relative;
-    bottom: 140px;
-    right: 430px;
-}
-
-#move-right{
-    width: 35px;
-    height: 35px;
-    border: solid #ffc600;
-    border-width: 0 3px 3px 0;
-    display: inline-block;
-    padding: 3px;
-    transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    background-color: transparent;
-    position: relative;
-    bottom: 140px;
-    left: 430px;
-
-}
-
-footer ul li{
-    display: inline-block;
-}
-
-
-
-#popup-form {
-width:100%;
-height: 100%;
-background-color: rgba(128, 128, 128, 0.678);
-position: fixed;
-z-index: 1;
-display: none;
-
-}
-#popup-form form{
-margin: auto;
-margin-top:40px;
-width: 1000px;
-height: 600px;
-background-color: white;
-padding: 50px;
-border:  3px solid  #ffc600;
-
-}
-
-#popup-form form div {
-display: block;
-text-align: right;
-padding: 20px;
-
-}
-#popup-form form div label{
-font-size: x-large;
-}
-#popup-form form img {
-    position: fixed;
-    width: 500px;
-    height: 500px;
-    border: 3px solid  #ffc600;
-}
-
-#printText{
-position: absolute;
-display: inline-block;
-width: 210px;
-max-width: 210px;
-word-wrap:break-word;
-margin-left: 140px;
-margin-top: 170px;
-font-size: xx-large;
-display: inline-block;
-font-family: 'Amiri', serif;
-font-family: 'Changa', sans-serif;
-opacity: 0.8;
-
-}
-#printText p{
-text-align: center;
-opacity: 0.8;
-}
-
- .fa {
-    padding-top:20px;
-    width: 20px;
-    text-align: center;
-    text-decoration: none;
-    /* margin: 5px 2px; */
-    border-radius: 50%;
-    color: #ffc600;
-
-  }
-  .fa-facebook
-  {
-      margin-left:670px;
-  }
-  .fa:hover {
-      opacity: 0.4;
-  }
-
+        #checkout-massage{
+            display: none;
+            width: 400px;
+            height: 100px;
+            margin: auto;
+            position: relative;
+           bottom: 500px;
+            z-index: 1px;
+            background-color: red;
+            padding: 100px;
+            line-height: 30px   ;
+            text-align: center;
+        }
+    /* ----------------------------------------------------------------------------- */
+    @keyframes type{
+    from {
+    width: 0;
+    }
+    
+    }
+    
+    @keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+    }

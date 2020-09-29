@@ -1,32 +1,30 @@
 'use strict';
 
 const tableTitles = ['Remove', 'Color', 'Size', 'Quantity', 'Price'];
-
-
-const tableEle = document.getElementById('table-cart');
-const thead = document.createElement('thead');
-tableEle.appendChild(thead);
-
-const tHeadEl = tableEle.firstElementChild;
-// console.log(tHeadEl);
-const trEl = document.createElement('tr');
-tHeadEl.appendChild(trEl);
-
-const tr = tHeadEl.firstElementChild;
-
-// function tHeader
-for (var i = 0; i <= 4; i++) {
-  let thEl = document.createElement('th');
-  tr.appendChild(thEl);
-  thEl.textContent = tableTitles[i];
-}
-// ---
 // eslint-disable-next-line no-undef
 let cart = getCartLocalStorage();
-let tBody = document.createElement('tbody');
-tableEle.appendChild(tBody);
-let tbodyElm = tableEle.lastElementChild;
+const tableEle = document.getElementById('table-cart');
+
 function cartRender() {
+  document.getElementById('itemCount').textContent=`(${cart.Orders.length})`;
+  //Create Table
+  const thead = document.createElement('thead');
+  tableEle.appendChild(thead);
+  const tHeadEl = tableEle.firstElementChild;
+  const trEl = document.createElement('tr');
+  tHeadEl.appendChild(trEl);
+  const tr = tHeadEl.firstElementChild;
+  // tHeader fill
+  for (var i = 0; i <= 4; i++) {
+    let thEl = document.createElement('th');
+    tr.appendChild(thEl);
+    thEl.textContent = tableTitles[i];
+  }
+
+  let tBody = document.createElement('tbody');
+  tableEle.appendChild(tBody);
+  let tbodyElm = tableEle.lastElementChild;
+  // tBody fill
   for (var d = 0; d < cart.Orders.length; d++) {
 
     let trEl = document.createElement('tr');
@@ -50,18 +48,45 @@ function cartRender() {
     }
   }
 
+
 }
+
+
+function cleanTable() {
+  tableEle.innerHTML='';
+}
+
 tableEle.addEventListener('click', removeOrder);
 
 function removeOrder(event) {
+  console.log(event.target.value);
   for (let i = 0; i < cart.Orders.length; i++)
-    if (Number(event.target.id) === i) {
+    if (event.target.id ===i.toString()) {
       cart.Orders.splice(i, 1);
       localStorage.setItem('cart', JSON.stringify(cart));
+      cleanTable();
       cartRender();
+      document.getElementById('itemCount').textContent=`(${cart.Orders.length})`;
     }
 }
 
+let checkoutElm=document.getElementById('checkout');
+checkoutElm.addEventListener('click',checkout);
+let massage =document.getElementById('checkout-massage');
+function checkout(){
+  massage.style.display='block';
+  localStorage.setItem('cart', JSON.stringify([]));
+  cleanTable();
+  cartRender();
+}
+
+let doneElm=document.getElementById('done');
+doneElm.addEventListener('click',done);
+
+function done() {
+
+  massage.style.display='none';
+
+}
 
 cartRender();
-
