@@ -9,6 +9,7 @@ function Quot(title, story) {
 
 }
 
+// eslint-disable-next-line no-unused-vars
 function getCartLocalStorage(){
   let k=localStorage.getItem('cart');
   k=JSON.parse(k);
@@ -18,6 +19,7 @@ function getCartLocalStorage(){
   else return new Cart([]);
 }
 
+// eslint-disable-next-line no-unused-vars
 function Order (color,size,qty)
 {
   this.color=color;
@@ -31,4 +33,6 @@ function Cart (Orders)
   this.Orders=Orders;
 }
 
+let cartf=getCartLocalStorage();
+document.getElementById('itemCount').textContent = `(${cartf.Orders.length})`;
 
