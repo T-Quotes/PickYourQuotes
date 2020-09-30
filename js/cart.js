@@ -75,7 +75,9 @@ checkoutElm.addEventListener('click',checkout);
 let massage =document.getElementById('checkout-massage');
 function checkout(){
   massage.style.display='block';
-  localStorage.setItem('cart', JSON.stringify([]));
+
+  localStorage.setItem('cart', JSON.stringify(null));
+
   cleanTable();
   cartRender();
 }
