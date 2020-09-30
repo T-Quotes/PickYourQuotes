@@ -124,6 +124,8 @@ function formSubmit(event) {
     cart.Orders.push(new Order(color, size, qty));
     popupForm.style.display = 'none';
     localStorage.setItem('cart', JSON.stringify(cart));
+    document.getElementById('itemCount').textContent=`(${cart.Orders.length})`;
+    location.reload();
 
   }
 }
@@ -186,6 +188,7 @@ function render() {
   //--
 
   setTrinding();
+
   // eslint-disable-next-line no-undef
 }
 
