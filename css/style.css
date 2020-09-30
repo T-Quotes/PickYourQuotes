@@ -21,7 +21,8 @@
     }
     
     nav ul{
-    float: right;
+        float: right;
+        padding: 9px;
     }
     nav ul li{
     display: inline-block;
@@ -140,7 +141,7 @@
         /* background-color:#f5f0e1; */
         margin: 3px;
         position: relative;
-        bottom: 127px;
+        bottom: 387px;
         width: 99.8%;
     }
     
@@ -152,7 +153,7 @@
         width: 33.3%;
         position: relative;
         margin-top: 112px;
-        margin-bottom: 175px;
+        margin-bottom: -307px;
     }
     
     
@@ -174,7 +175,7 @@
         padding: 8px;
         padding-bottom: 10px;
         position: relative;
-        bottom: 130px;
+        bottom: 95px;
         left: 2px;
         width: -webkit-fill-available;
         height: max-content;
@@ -197,15 +198,17 @@
 
     
     #section-left
-    { background-color: rgba(255, 255, 255, 0.61) ;
-    background-image:
-    url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
-    background-size: cover;
-    width: 100%;
-    font-family: 'Amiri', serif;
-    opacity: 1;
-    border-radius: 12px;
-    color:#1e3d59;
+    {    background-color: rgba(255, 255, 255, 0.61);
+        background-image: url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
+        background-size: cover;
+        width: 100%;
+        font-family: 'Amiri', serif;
+        opacity: 1;
+        border-radius: -7px;
+        color: #1e3d59;
+        position: relative;
+        bottom: 8px;
+        right: 8px;
 
     
     }
@@ -240,7 +243,7 @@
     font-size: 50px;
     padding: 20px;
     font-family: 'Amiri', serif;
-    color:#ffc600;
+    color:#ffc13b;
     cursor: pointer;
     display: inline-block;
     padding-right:10px ;
@@ -313,12 +316,12 @@
         background-position: right;
         line-height: 30px;
         color: #1e3d59;
-        border-radius: 10px;
+        border-radius: -1px;
         width: 30%;
         height: 343px;
         display: inline-block;
         position: relative;
-        left: 1048px;
+        left: 1041px;
         top: 12px;
         margin-top: 0px;
         margin-bottom: 12px;
@@ -426,6 +429,11 @@
           transition-property: all;
         transition-timing-function: line;
       }
+
+      td:hover:first-child{
+        cursor: pointer;
+        background-color: red;
+      }
     
     footer ul li{
     display: inline-block;
@@ -467,6 +475,7 @@
         padding: 5px;
         font-size: x-large;
     }
+
 
     #popup-form form #printText{
         position: relative;
@@ -539,6 +548,7 @@
     opacity: 0.8;
     
     }
+    
     #printText p{
 
     text-align: center;
@@ -586,7 +596,7 @@
         height: 600px;
         background-color: white;
         padding: 50px;
-        border: 3px solid #ffc13b;
+        box-shadow: 2px -4px 31px #ffc13b;
     }
     
     #Pageform #printText{
@@ -598,12 +608,13 @@
     display: inline-block;
     font-family: 'Changa', sans-serif;
     opacity: 0.8;
-    
+    top: 338px;
     }
     #Pageform form div #printText p{
     text-align: center;
     opacity: 0.8;
     font-size: xx-large;
+    margin-top: 20px;
     
     }
     
@@ -666,7 +677,6 @@
         float: left;
         width: 500px;
         height: 500px;
-        border: 3px solid #ffc13b;
         margin-right: 42px;
     }
 
@@ -678,9 +688,13 @@
         height: 20px;
     }
     .e7na{
-        border-radius: 45%;
-        padding: 40px;
+        display: inline-block;
+        border-radius: 69%;
+        padding: 41px;
         margin-left: 55px;
+        float: left;
+        position: relative;
+        top: 138px;
         }
     
     .navBar{
@@ -694,12 +708,24 @@
     
     footer{
         position: absolute;
-    clear: both;
-    background-size: cover;
-    background-color: #1e3d59;
-    height: 150px;
-    width: 100%;
+        clear: both;
+        background-size: cover;
+        background-color: #1e3d59;
+        height: 150px;
+        width: 100%;
+        top: 900px;
     }
+
+    #footer-main{
+        position: absolute;
+        clear: both;
+        background-size: cover;
+        background-color: #1e3d59;
+        height: 150px;
+        width: 100%;
+        top: 1996px;
+    }
+
     footer p{
     padding-top:50px;
     display: inline-block;
@@ -770,13 +796,14 @@
     }
     #paragrapg-about p{
      display: online;
-     padding-top: 100px;
-     margin-left: 150px;
+     padding-top: 130px;
+     margin-left: 140px;
      width:220px;
      height: 300px;
      float: left;
      font-family: serif;
      font-size: 20px;
+     font-family: 'Sansita Swashed', cursive;
     }
     #paragrapg-about
     {position: relative;
@@ -791,6 +818,7 @@
         color: #f5f0e1;
     }
         #footer-about {
+        clear: both;
         position: absolute;
         bottom: 30px;
         float: left;
