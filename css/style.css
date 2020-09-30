@@ -6,6 +6,7 @@
     width: 100%;
     }
 
+
     main{
         margin-bottom: -98px;
     }
@@ -16,6 +17,7 @@
     height: 100px;
     width: 100%;
     font-family: monospace;
+
     }
     
     nav ul{
@@ -40,9 +42,11 @@
     
     nav ul li a:hover{
     
+
     text-decoration: underline #f5f0e1;
     opacity: 0.7;
     
+
     
     }
     
@@ -53,6 +57,7 @@
     }
     #logo{
     
+
         width: 78px;
         height: 84px;
         position: relative;
@@ -160,6 +165,7 @@
     }
     
     #section-down{
+
 
         margin: 3px;
         background-image: repeating-linear-gradient(90deg, black,#1e3d59, transparent 1519px);
@@ -273,6 +279,7 @@
     #move-left{
     position: relative;
     top: 224px;
+
     right: -20px;
     width: 35px;
     height: 35px;
@@ -287,8 +294,10 @@
     
     #move-right{
     position: relative;
+
     top: 224px;
     left: 1400px;
+
     width: 35px;
     height: 35px;
     border: solid #ffc600;
@@ -305,6 +314,7 @@
         outline: none;
         }
         
+
     #section-right{
         background-color: rgba(255, 255, 255, 0.61);
         background-image: url(https://img.freepik.com/free-vector/white-3d-modern-background-design_53876-88246.jpg?size=626&ext=jpg);
@@ -493,6 +503,7 @@
         left: 51px;
     }
 
+
     #popup-form form div label{
     font-size: x-large;
     }
@@ -500,6 +511,7 @@
     position: fixed;
     width: 500px;
     height: 500px;
+
     border: 3px solid #ffc13b;
     }
     
@@ -519,6 +531,7 @@
         border-bottom: 2px solid #294d6dab;
     }
 
+
     #printText{
     position: absolute;
     display: inline-block;
@@ -535,6 +548,7 @@
     
     }
     #printText p{
+
     text-align: center;
     opacity: 0.8;
     }
@@ -706,6 +720,7 @@
     padding-top:50px;
     display: inline-block;
     text-align: center;
+
     position: relative;
     left: 587px;
     color:antiquewhite;
@@ -731,6 +746,7 @@
      
         
 
+
         #checkout-massage{
             display: none;
             width: 400px;
@@ -749,6 +765,7 @@
     #footer-about{
         margin-top: 176px;
     }
+
 
     /* ----------------------------------------------------------------------------- */
     @keyframes type{
