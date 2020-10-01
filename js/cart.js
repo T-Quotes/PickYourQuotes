@@ -1,10 +1,12 @@
+/* eslint-disable no-undef */
 'use strict';
-
+//set info
 const tableTitles = ['Remove', 'Color', 'Size', 'Quantity', 'Price'];
-// eslint-disable-next-line no-undef
 let cart = getCartLocalStorage();
 const tableEle = document.getElementById('table-cart');
 
+//---------------------
+//make the cart
 function cartRender() {
   document.getElementById('itemCount').textContent=`(${cart.Orders.length})`;
   //Create Table
@@ -30,7 +32,7 @@ function cartRender() {
     let trEl = document.createElement('tr');
     tbodyElm.appendChild(trEl);
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 6; i++) {
       let tdElm = document.createElement('td');
       trEl.appendChild(tdElm);
       if (i === 0) {
@@ -45,6 +47,8 @@ function cartRender() {
         tdElm.textContent = cart.Orders[d].qty;
       else if (i === 4)
         tdElm.textContent = '20$';
+      else if (i===5)
+        tdElm.innerHTML=cart.Orders[d].img;
     }
   }
 
@@ -78,7 +82,6 @@ function checkout(){
   localStorage.setItem('cart', JSON.stringify(null));
   cleanTable();
   cartRender();
-  location.reload();
 
 }
 
@@ -88,6 +91,7 @@ doneElm.addEventListener('click',done);
 function done() {
 
   massage.style.display='none';
+  location.reload();
 
 }
 

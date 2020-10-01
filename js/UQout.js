@@ -24,8 +24,10 @@ function forDelete(event) {
 }
 let formPage=document.getElementById('Pageform');
 formPage.addEventListener('click', formSubmit);
-function formSubmit(event) {
 
+let img;
+function formSubmit(event) {
+  event.preventDefault();
   // eslint-disable-next-line no-undef
   let cart = new Cart([]);
   let color, size, qty;
@@ -37,12 +39,14 @@ function formSubmit(event) {
     if (color === 'white') {
       document.getElementById('mockup').src = 'https://mockups.32pt.com/mockupServer/blanks/TC0/White/unisex-crewneck-tshirt-v2-front/regular.jpg';
       document.getElementById('printText').firstElementChild.style.color = 'black';
+      img=`<section class='Preview'><img src="img/WhiteT.png"><p style='color:black;opacity:0.8'>${document.getElementById('seeMyQout').textContent}</p></section>`;
 
     }
     else if (color === 'black') {
       document.getElementById('mockup').src = 'https://mockups.32pt.com/mockupServer/blanks/TC0/Black/unisex-crewneck-tshirt-v2-front/regular.jpg';
       document.getElementById('printText').firstElementChild.style.color = 'white';
       document.getElementById('printText').firstElementChild.style.opacity = 1;
+      img=`<section class='Preview'><img src="img/BlackT.png"><p style='color:white'>${document.getElementById('seeMyQout').textContent}</p></section>`;
 
     }
   }
@@ -58,9 +62,9 @@ function formSubmit(event) {
     // eslint-disable-next-line no-undef
     cart = getCartLocalStorage();
     // eslint-disable-next-line no-undef
-    cart.Orders.push(new Order(color, size, qty));
-    formPage.style.display = 'none';
+    cart.Orders.push(new Order(color, size, qty,img));
     localStorage.setItem('cart', JSON.stringify(cart));
-
+    alert('Order Placed');
+    location.reload();
   }
 }
