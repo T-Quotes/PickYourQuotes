@@ -359,16 +359,14 @@
         font-size: 50px;
         text-align: center;
         padding: 50px;
-        /* background-color: #ffc13b; */
         width: 600px;
         height: 700px;
         margin: auto;
-        /* border: 1px dashed #522448; */
         margin-top: 68px;
         margin-bottom: 100px;
         color: #f5f0e1;
         box-shadow: 2px -4px 31px #ffc13b;
-
+        overflow: auto;
     
     
     }
@@ -392,7 +390,7 @@
     #tableSection article{
         position: relative;
         padding-bottom: 100px;
-        width: 450px;
+        width: 500px;
         border: 1px #1e3d59 solid;
         border-radius: 30px;
         background-color: #1e3d59;
@@ -422,6 +420,9 @@
     #tableSection table td,th{
     padding: 10px;
     border: 1px solid #ffc13b;
+    width: 70px;
+    vertical-align: middle;
+    height: 70px;
     }
     
     td:hover {
@@ -774,7 +775,28 @@
             line-height: 30px   ;
             text-align: center;
             font-size:30px;
+            border: 1px solid #1e3d59;
         }
+
+        #checkout-massage h2{
+            vertical-align: middle;
+            
+    position: relative;
+    bottom: 26px;
+
+        }
+
+        #checkout-massage input{
+            width: 139px;
+            padding: 13px;
+            border: 0px;
+            background-color: #1e3d59;
+            color: #ffc13d;
+            font-family: serif;
+            font-size: initial;
+            font-weight: normal;
+        }
+
 
     /*-------------------------------------------------------------------------------*/
   
@@ -841,3 +863,29 @@
             left: 1400px;
             top: 1px;
         }
+
+        .Preview{
+            width: 20px;
+            height: 20px;
+
+        }
+
+        .Preview img {
+            width: 50px;
+            height: 60px;
+            background-color: transparent;
+            position: relative;
+            bottom: 16px;
+        }
+
+        .Preview p {
+            margin: auto;
+    text-align: center;
+    font-size: 2.8px;
+    position: relative;
+    bottom: 60px;
+    left: 15.5px;
+    width: 15px;
+    font-family: 'Changa', sans-serif;
+
+    }

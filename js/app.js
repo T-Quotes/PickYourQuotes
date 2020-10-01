@@ -31,7 +31,7 @@ function randomImages() {
   {
     imgElm = document.createElement('img');
     sectionElmTop.appendChild(imgElm);
-    let indexImg = getRandomIndex(0, imageFoldor.length );
+    let indexImg = getRandomIndex(0, imageFoldor.length);
     imgElm.src = `img/${imageFoldor[indexImg]}`;
     imgElm.title = imageFoldor[indexImg].split('.')[0];
 
@@ -64,22 +64,10 @@ function setTitleAndQuot(title, story) {
 
 }
 
-
 //---------------------------
-function getLocalStorge() {
-  let quotAll = JSON.parse(localStorage.getItem('Quotes'));
-  if (quotAll) {
-    Quot.all = [];
-    for (let i = 0; i < quotAll.length; i++) {
-      new Quot(quotAll[i].title, quotAll[i].story);
-      Quot.all[i].tranding += quotAll[i].tranding;
-    }
-  }
-
-}
-
-//---------------------------
+//set and update Trinding Section
 function setTrinding() {
+  getLocalStorge();
   let liElm;
   for (let i = 0; i < Quot.all.length; i++) {
     liElm = document.createElement('li');
@@ -89,7 +77,9 @@ function setTrinding() {
   }
 }
 //---------------------------
+//Popup Form
 popupForm.addEventListener('click', formSubmit);
+let img=`<section class='Preview'><img src="img/WhiteT.png"><p style='color:black;opacity:0.8'>${document.getElementById('printText').textContent}</p></section>`;
 function formSubmit(event) {
   event.preventDefault();
   let cart = new Cart([]);
@@ -102,12 +92,13 @@ function formSubmit(event) {
     if (color === 'white') {
       document.getElementById('mockup').src = 'https://mockups.32pt.com/mockupServer/blanks/TC0/White/unisex-crewneck-tshirt-v2-front/regular.jpg';
       document.getElementById('printText').firstElementChild.style.color = 'black';
-
+      img=`<section class='Preview'><img src="img/WhiteT.png"><p style='color:black;opacity:0.8'>${document.getElementById('printText').textContent}</p></section>`;
     }
     else if (color === 'black') {
       document.getElementById('mockup').src = 'https://mockups.32pt.com/mockupServer/blanks/TC0/Black/unisex-crewneck-tshirt-v2-front/regular.jpg';
       document.getElementById('printText').firstElementChild.style.color = 'white';
       document.getElementById('printText').firstElementChild.style.opacity = 1;
+      img=`<section class='Preview'><img src="img/BlackT.png"><p style='color:white'>${document.getElementById('printText').textContent}</p></section>`;
 
     }
   }
@@ -121,35 +112,38 @@ function formSubmit(event) {
 
   if (event.target.id === 'Place-Order') {
     cart = getCartLocalStorage();
-    cart.Orders.push(new Order(color, size, qty));
+    cart.Orders.push(new Order(color, size, qty,img));
     popupForm.style.display = 'none';
     localStorage.setItem('cart', JSON.stringify(cart));
-    document.getElementById('itemCount').textContent=`(${cart.Orders.length})`;
+    document.getElementById('itemCount').textContent = `(${cart.Orders.length})`;
+    Quot.all[index].tranding++;
+    setLocalStorge();
+    alert('Order Placed');
     location.reload();
 
   }
 }
 //---------------------------
-let cancelElm=document.getElementById('Cancel');
-cancelElm.addEventListener('click',closePopup);
+//Close form
+let cancelElm = document.getElementById('Cancel');
+cancelElm.addEventListener('click', closePopup);
 
-function closePopup (){
+function closePopup() {
   popupForm.style.display = 'none';
 }
 //---------------------------
+//swap between Quot and control open PopupPage
 sectionElmLeft.addEventListener('click', quotControl);
 
 function quotControl(event) {
   event.preventDefault();
-
+  //---open popup
   if (event.target === document.getElementsByTagName('h2')[1]) {
     popupForm.style.display = 'block';
     let text = document.getElementById('printText').firstElementChild;
     text.textContent = Quot.all[index].title;
-    Quot.all[index].tranding++;
-    setLocalStorge();
   }
-  //---
+  //---go to right
   if (event.target.id === buttonRight.id) {
     index++;
     if (index === Quot.all.length - 1) {
@@ -161,7 +155,7 @@ function quotControl(event) {
       setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
     }
   }
-
+  //---go to left
   else if (event.target.id === buttonLeft.id) {
     if (index === 0) {
       buttonLeft.style.display = 'none';
@@ -179,18 +173,11 @@ function quotControl(event) {
 }
 
 function render() {
-  getLocalStorge();
-
-  randomImages();
-  //--
   buttonLeft.style.display = 'none';
+  getLocalStorge();
+  randomImages();
   setTitleAndQuot(Quot.all[index].title, Quot.all[index].story);
-  //--
-
   setTrinding();
-
-  // eslint-disable-next-line no-undef
 }
 
-// eslint-disable-next-line no-undef
 render();

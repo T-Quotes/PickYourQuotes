@@ -8,6 +8,22 @@ function Quot(title, story) {
   Quot.all.push(this);
 
 }
+//---------------------------
+// eslint-disable-next-line no-unused-vars
+function Order (color,size,qty,img)
+{
+  this.color=color;
+  this.size=size;
+  this.qty=qty;
+  this.img=img;
+}
+//---------------------------
+function Cart (Orders)
+{
+  this.Orders=Orders;
+}
+
+
 
 // eslint-disable-next-line no-unused-vars
 function getCartLocalStorage(){
@@ -19,19 +35,7 @@ function getCartLocalStorage(){
   else return new Cart([]);
 }
 
-// eslint-disable-next-line no-unused-vars
-function Order (color,size,qty)
-{
-  this.color=color;
-  this.size=size;
-  this.qty=qty;
 
-}
-
-function Cart (Orders)
-{
-  this.Orders=Orders;
-}
 
 let cartf=getCartLocalStorage();
 document.getElementById('itemCount').textContent = `(${cartf.Orders.length})`;
