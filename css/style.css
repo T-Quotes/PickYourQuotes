@@ -394,13 +394,12 @@
         border: 1px #1e3d59 solid;
         border-radius: 30px;
         background-color: #1e3d59;
-        left: 25px;
         top: 10px;
+        
     }
     #tableSection input{
         position: relative;
         top: 134px;
-        right: -13px;
         background-color: #ffc13b;
         border: 1px solid #ffc13b;
         font-size: x-large;
