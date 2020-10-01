@@ -36,13 +36,9 @@ let allQuot = [
 // }
 
 
-for (let i = 0; i < allQuot.length; i++) {
-  new Quot(allQuot[i].title, allQuot[i].story);
-}
 
 
 getLocalStorge();
-setLocalStorge();
 
 
 
@@ -58,9 +54,17 @@ function setLocalStorge() {
 function getLocalStorge() {
   let quotAll = JSON.parse(localStorage.getItem('Quotes'));
   Quot.all = [];
-  for (let i = 0; i < quotAll.length; i++) {
-    new Quot(quotAll[i].title, quotAll[i].story);
-    Quot.all[i].tranding += quotAll[i].tranding;
+  if (quotAll)
+    for (let i = 0; i < quotAll.length; i++) {
+      new Quot(quotAll[i].title, quotAll[i].story);
+      Quot.all[i].tranding += quotAll[i].tranding;
+    }
+  else {
+    for (let i = 0; i < allQuot.length; i++) {
+      new Quot(allQuot[i].title, allQuot[i].story);
+    }
+    setLocalStorge();
+
   }
 
 }
